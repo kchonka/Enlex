@@ -1,0 +1,8 @@
+Enlex is set out to be a web-app flashcard program to assist people in language
+learning. Connecting to the Google Translate API, Enlex will be able to create
+vocabulary sets in any desired target language. Vocabulary sets can be created
+from different categories of words (ex: food, numbers, common verbs, etc.).
+The goal is for language learners to be able to expose themselves to new
+vocabulary words for free.
+
+Other features will include the ability to track progress and possibly quizzes.
