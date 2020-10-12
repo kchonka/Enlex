@@ -1,51 +1,19 @@
 import React, {Component} from 'react';
 import globe from './images/globe.png';
 import FadeIn from 'react-fade-in';
-import AnimateOnChange from 'react-animation';
+import { Home } from './Home';
+import AnimateOnChange from 'react-animate-on-change';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { NavigationBar } from './components/NavigationBar';
+import { Layout } from './components/Layout';
 
-function App() {
-  const logoStyle = {
-    font: "Ariel",
-    fontSize: 70,
-    color: "#424FFC",
-    textAlign: "left",
-    paddingLeft: "40px",
-    paddingTop: "20px",
-    margin: 0
+class App extends Component {
+  render (){
+    return(
+      <Home></Home>
+    );
   }
-
-  const backgroundImageStyle = {
-    backgroundImage: `url(${globe})`,
-    backgroundRepeat:'no-repeat',
-    backgroundSize:'cover',
-    backgroundPosition: 'center',
-    height: '100vh',
-    margin: 0,
-  }
-
-  const textStyle = {
-    //font: "Ariel",
-    fontSize: 26,
-    color: "#424FFC",
-    textAlign: "center",
-  }
-
-  return (
-    <div style={backgroundImageStyle}>
-      <h1 style={logoStyle}>Enlex</h1>
-
-      <FadeIn>
-        <h2 style={textStyle}> The flashcard learning program that exposes you to </h2>
-        <h2 style={textStyle}> new vocabulary in any target language! </h2>
-      </FadeIn>
-
-      <span>Languages</span>
-    </div>
-  );
-
-
 }
-
 
 
 export default App;
