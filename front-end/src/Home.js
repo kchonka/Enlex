@@ -1,5 +1,4 @@
 import React from 'react'
-import AnimateOnChange from 'react-animate-on-change';
 import FadeIn from 'react-fade-in';
 import TextLoop from "react-text-loop";
 import globe from './images/globe.png';
@@ -33,7 +32,6 @@ const StatementStyle = {
 const textStyle = {
   font: "Trebuchet MS",
   fontSize: 25,
-  //fontWeight: "bold",
   color: "#ED2550",
   textAlign: "center"
 }
