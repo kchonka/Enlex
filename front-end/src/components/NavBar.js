@@ -1,30 +1,41 @@
 import React, { Component } from 'react';
+import logo from '../images/logowhitepurple.png'
 
 const ulStyle = {
   margin: 0,
   padding: 0,
+  display: "inline-block",
   overflow: "hidden",
-  backgroundColor: "#424FFC" //blue-purple
 }
 
 const aStyle = {
   display: "block",
   float: "right",
-  padding: "8px",
+  padding: "12px",
+  paddingLeft: "20px",
   textAlign: "center",
-  color: "#FFFFFF",
+  textDecoration: "none",
   fontWeight: "bold",
-  fontSize: 18
+  fontSize: 20,
+  color: "#FFFFFF",
+}
+
+const logoStyle = {
+  display:'inline-block',
+  height: "80px",
+  width: "140px",
+  position: "relative"
 }
 
 class NavBar extends Component{
   render(){
       return(
-        <div>
+        <div style={{  background: "linear-gradient(#424FFC, black)", overflow:"hidden"}}>
+          <img src={require('../images/logowhiteblue2.png')} style={logoStyle}/>
           <ul style={ulStyle}>
-            <li style={{display: "inline"}}><a style={aStyle} href="/Contact">Contact</a></li>
-            <li style={{display: "inline"}}><a style={aStyle} href="/About">About</a></li>
-            <li style={{display: "inline"}}><a style={aStyle} href="/">Home</a></li>
+            <li style={{display: "inline-block"}}><a style={aStyle} href="/">Home</a></li>
+            <li style={{display: "inline-block"}}><a style={aStyle} href="/About">About</a></li>
+            <li style={{display: "inline-block"}}><a style={aStyle} href="https://github.com/kchonka/Enlex">Source</a></li>
           </ul>
         </div>
       );

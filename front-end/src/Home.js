@@ -5,12 +5,14 @@ import globe from './images/globe.png';
 
 // CSS Embedded Styling
 const backgroundImageStyle = {
+  background: "black",
   backgroundImage: `url(${globe})`,
   backgroundRepeat:'no-repeat',
   backgroundSize:'cover',
   backgroundPosition: 'center',
   height: '100vh',
   margin: 0,
+  padding: 0
 }
 
 const logoStyle = {
@@ -18,15 +20,15 @@ const logoStyle = {
   fontSize: 70,
   color: "#424FFC",
   textAlign: "left",
-  paddingLeft: "25px",
-  paddingTop: "10px",
   margin: 0
 }
 
 const StatementStyle = {
-  fontSize: 28,
-  color: "#FFFFFF",
+  fontSize: 26,
+  color: "#8DCAFF", //LIGHT BLUE
   textAlign: "center",
+  padding: 0,
+  margin: 0
 }
 
 const textStyle = {
@@ -57,15 +59,16 @@ export const SampleLang = () => {
 
 export const Home = () => (
     <div style={backgroundImageStyle}>
-      <h1 style={logoStyle}>Enlex</h1>
-
+      <br/>
+      <br/>
+      <br/>
       <FadeIn>
-        <h2 style={StatementStyle}>
+        <h1 style={StatementStyle}>
           The flashcard learning program that exposes you to new <br></br>
           vocabulary in ANY target language.
-        </h2>
+        </h1>
       </FadeIn>
-
+      <br/>
       <SampleLang></SampleLang> // Looping of different languages
     </div>
 )
