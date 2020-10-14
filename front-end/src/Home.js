@@ -1,9 +1,8 @@
-import React from 'react'
+import React, {Component} from 'react'
 import FadeIn from 'react-fade-in';
 import TextLoop from "react-text-loop";
 import globe from './images/globe.png';
 
-// CSS Embedded Styling
 const backgroundImageStyle = {
   background: "black",
   backgroundImage: `url(${globe})`,
@@ -57,18 +56,20 @@ export const SampleLang = () => {
   )
 };
 
-export const Home = () => (
-    <div style={backgroundImageStyle}>
-      <br/>
-      <br/>
-      <br/>
-      <FadeIn>
-        <h1 style={StatementStyle}>
-          The flashcard learning program that exposes you to new <br></br>
-          vocabulary in ANY target language.
-        </h1>
-      </FadeIn>
-      <br/>
-      <SampleLang></SampleLang> // Looping of different languages
-    </div>
-)
+export const Home = () => {
+    return(
+      <div style={backgroundImageStyle}>
+        <br/>
+        <br/>
+        <br/>
+        <FadeIn>
+          <h1 style={StatementStyle}>
+            The flashcard learning program that exposes you to new <br></br>
+            vocabulary in ANY target language.
+          </h1>
+        </FadeIn>
+        <br/>
+        <SampleLang></SampleLang> // Looping of different languages
+      </div>
+    );
+}

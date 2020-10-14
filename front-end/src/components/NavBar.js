@@ -30,7 +30,7 @@ const logoStyle = {
 class NavBar extends Component{
   render(){
       return(
-        <div style={{  background: "linear-gradient(#424FFC, black)", overflow:"hidden"}}>
+        <div style={{ background: "linear-gradient(#424FFC, black)", overflow:"hidden"}}>
           <img src={require('../images/logowhiteblue2.png')} style={logoStyle}/>
           <ul style={ulStyle}>
             <li style={{display: "inline-block"}}><a style={aStyle} href="/">Home</a></li>
