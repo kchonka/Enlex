@@ -31,9 +31,8 @@ class NavBar extends Component{
   render(){
       return(
         <div style={{ background: "linear-gradient(#424FFC, black)", overflow:"hidden"}}>
-          <img src={require('../images/logowhiteblue2.png')} style={logoStyle}/>
+          <a href="/"><img src={require('../images/logowhiteblue2.png')} style={logoStyle}/></a>
           <ul style={ulStyle}>
-            <li style={{display: "inline-block"}}><a style={aStyle} href="/">Home</a></li>
             <li style={{display: "inline-block"}}><a style={aStyle} href="/About">About</a></li>
             <li style={{display: "inline-block"}}><a style={aStyle} href="https://github.com/kchonka/Enlex">Source</a></li>
           </ul>
