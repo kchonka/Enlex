@@ -23,10 +23,11 @@ const textStyle = {
 export const About = () => {
   return(
     <div style={backgroundImageStyle}>
-      <h1 style={textStyle}>Enlex is set out to be a web-app flashcard program to assist people <br></br>
-      in language learning. Connecting to the Google Translate API, Enlex will be able to create <br></br>
-      vocabulary sets in any desired target language. Vocabulary sets can be created from different <br></br>
-      categories of words (ex: food, numbers, common verbs, etc.). <br></br>
+      <h1 style={textStyle}>Enlex is an online flashcard program that makes language learning easier.<br></br>
+      <br></br>
+      The program works by connecting to the Google Translate API to generate vocabulary sets <br></br>
+      in any target language. Vocabulary sets can be created from different categories of <br></br>
+      words (ex: food, numbers, common verbs, etc.). <br></br>
       <br></br>
       The goal is for language learners to be able to expose themselves to new vocabulary words for free.</h1>
     </div>
