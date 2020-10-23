@@ -1,7 +1,8 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import FadeIn from 'react-fade-in';
 import TextLoop from "react-text-loop";
 import globe from './images/globe.png';
+import LoginButton from "./LoginButton.js"
 
 const backgroundImageStyle = {
   background: "black",
@@ -50,7 +51,6 @@ export const SampleLang = () => {
         <span style={textStyle}> Italiano </span>
         <span style={textStyle}> 日本語 </span>
         <span style={textStyle}> বাংলা </span>
-
       </TextLoop>
     </div>
   )
@@ -69,7 +69,10 @@ export const Home = () => {
           </h1>
         </FadeIn>
         <br/>
-        <SampleLang></SampleLang> // Looping of different languages
+        <SampleLang></SampleLang>
+        <br/>
+        <br/>
+        <LoginButton></LoginButton>
       </div>
     );
 }
