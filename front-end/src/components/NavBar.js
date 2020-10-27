@@ -26,13 +26,16 @@ const logoStyle = {
   display:'inline-block',
   height: "80px",
   width: "140px",
-  position: "relative"
+  position: "relative",
+  paddingBottom: "8px",
+  paddingLeft: "10px",
+  paddingTop: "2px"
 }
 
 class NavBar extends Component{
   render(){
       return(
-        <div style={{ background: "linear-gradient(#424FFC, black)", overflow:"hidden"}}>
+        <div style={{ background: "#27259B", overflow:"hidden"}}>
           <a href="/"><img src={require('../images/logowhiteblue2.png')} style={logoStyle}/></a>
           <ul style={ulStyle}>
             <li style={{display: "inline-block"}}><a style={aStyle} href="/About">About</a></li>

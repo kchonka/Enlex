@@ -25,7 +25,7 @@ const logoStyle = {
 
 const StatementStyle = {
   fontSize: 26,
-  color: "#8DCAFF", //LIGHT BLUE
+  color: "#8DCAFF",
   textAlign: "center",
   padding: 0,
   margin: 0
