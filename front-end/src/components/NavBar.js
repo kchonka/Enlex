@@ -2,20 +2,16 @@ import React, { Component } from 'react';
 import logo from '../images/logowhitepurple.png'
 import { useAuth0 } from "@auth0/auth0-react";
 
-
-const ulStyle = {
-  margin: 0,
-  padding: 0,
-  display: "inline-block",
-  overflow: "hidden",
+const navbarstyle = {
+  background: "#27259B",
+  alignItems: "center",
+  width: "100%",
+  overflow: "hidden"
 }
 
 const aStyle = {
-  display: "block",
-  float: "right",
-  padding: "12px",
-  paddingLeft: "20px",
-  textAlign: "center",
+  display: "inline-block",
+  padding: "15px",
   textDecoration: "none",
   fontWeight: "bold",
   fontSize: 20,
@@ -23,25 +19,27 @@ const aStyle = {
 }
 
 const logoStyle = {
-  display:'inline-block',
   height: "80px",
   width: "140px",
-  position: "relative",
-  paddingBottom: "8px",
-  paddingLeft: "10px",
-  paddingTop: "2px"
+  paddingBottom: "6px",
+  paddingLeft: "6px",
+  paddingTop: "2px",
+  float: "left",
+  position: "relative"
 }
 
 class NavBar extends Component{
   render(){
       return(
-        <div style={{ background: "#27259B", overflow:"hidden"}}>
+        <div style={navbarstyle}>
           <a href="/"><img src={require('../images/logowhiteblue2.png')} style={logoStyle}/></a>
-          <ul style={ulStyle}>
-            <li style={{display: "inline-block"}}><a style={aStyle} href="/About">About</a></li>
-            <li style={{display: "inline-block"}}><a style={aStyle} href="https://github.com/kchonka/Enlex">Source</a></li>
-            <li style={{display: "inline-block"}}><a style={aStyle} href="/dashboard">My Account</a></li>
-          </ul>
+          <nav style={{float: "right", paddingRight: "15px"}}>
+            <ul>
+              <li style={{display: "inline-block"}}><a style={aStyle} href="/About">About</a></li>
+              <li style={{display: "inline-block"}}><a style={aStyle} href="https://github.com/kchonka/Enlex">Source</a></li>
+              <li style={{display: "inline-block"}}><a style={aStyle} href="/dashboard">My Account</a></li>
+            </ul>
+          </nav>
         </div>
       );
   }
