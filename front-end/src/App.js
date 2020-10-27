@@ -22,6 +22,8 @@ class App extends Component {
              <Route path="/About" component={About}/>
              <Route path="/login" component={LogIn}/>
              <Route path="/dashboard" component={Dashboard}/>
+             <Route path="/dashboard/sets"/>
+             <Route path="/dashboard/progress"/>
            </Switch>
         </div>
       </BrowserRouter>

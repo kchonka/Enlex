@@ -1,24 +1,21 @@
 import React, {Component} from 'react';
-import SideBar from './components/SideBar';
-import globe from './images/globe.png';
+import SideBar from './components/SideBar.js';
+import Table from './components/Table.js';
 
-const backgroundImageStyle = {
-  background: "black",
-  backgroundImage: `url(${globe})`,
-  backgroundRepeat:'no-repeat',
-  backgroundSize:'cover',
-  backgroundPosition: 'center',
-  height: '100vh',
-  margin: 0,
-  padding: 0
+const dashboardArea = {
+  background: "#FFFFFF",
+  height: "100vh",
+  alignItems: "center",
+  textAlign: "center"
 }
-
 
 class Dashboard extends Component{
   render(){
     return(
-      <div style={backgroundImageStyle}>
+      <div>
         <SideBar/>
+        <div style={dashboardArea}>
+        </div>
       </div>
     );
   }

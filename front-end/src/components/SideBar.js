@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 
 const sidebarstyle = {
-  background: "#FFFFFF",
-  height: "100%",
-  width: "200px",
+  background: "#F0F3F1",
+  height: "100vh",
+  width: "250px",
   paddingTop: "30px",
+  paddingLeft: "8px",
   margin: 0,
+  float: "left",
+  alignItems: "center",
+  verticalAlign: "middle"
 }
 
 const aStyle = {
-  padding: "8px 8px 8px 32px",
-  fontSize: "25px",
+  padding: "10px 10px 20px 40px",
+  fontSize: "22px",
+  fontWeight: "bold",
   display: "block",
   color: "#27259B",
   textDecoration: "none",
