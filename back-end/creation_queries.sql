@@ -5,8 +5,8 @@ CREATE TABLE Users(
   last_name VARCHAR(255)
 );
 
-CREATE TABLE Languages(
-  language_id CHAR(2),
+CREATE TABLE All_Languages(
+  language_id CHAR(5),
   language_name VARCHAR(100)
 );
 
@@ -33,7 +33,7 @@ CREATE TABLE Categories(
 );
 
 CREATE TABLE Words(
-  word_id INT,
   category_id INT,
+  word_id INT,
   word VARCHAR(255)
 );
