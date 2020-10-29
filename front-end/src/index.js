@@ -4,13 +4,12 @@ import './index.css';
 import App from './App';
 import { Auth0Provider } from "@auth0/auth0-react";
 import * as serviceWorker from './serviceWorker';
-import { About } from './About.js';
 
 ReactDOM.render(
   <Auth0Provider
     domain="enlex.us.auth0.com"
     clientId="2AaItDfFSvrwER2ytzFNX06dJ34vcLJJ"
-    redirectUri={window.location.origin}
+    redirectUri={"http://localhost:3000/dashboard"}
   >
     <App/>
   </Auth0Provider>,

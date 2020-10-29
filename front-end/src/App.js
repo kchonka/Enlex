@@ -10,6 +10,7 @@ import { Layout } from './components/Layout';
 import { About } from './About.js';
 import { LogIn } from './LogIn.js';
 import Dashboard from './Dashboard.js';
+import ProtectedRoute from "./components/ProtectedRoute";
 
 class App extends Component {
   render (){
@@ -21,9 +22,9 @@ class App extends Component {
              <Route path="/" component={Home} exact/>
              <Route path="/About" component={About}/>
              <Route path="/login" component={LogIn}/>
-             <Route path="/dashboard" component={Dashboard}/>
-             <Route path="/dashboard/sets"/>
-             <Route path="/dashboard/progress"/>
+             <ProtectedRoute path="/dashboard" component={Dashboard}/>
+             <ProtectedRoute path="/dashboard/sets" component={Dashboard}/>
+             <ProtectedRoute path="/dashboard/progress" component={Dashboard}/>
            </Switch>
         </div>
       </BrowserRouter>
