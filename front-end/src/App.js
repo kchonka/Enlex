@@ -20,11 +20,10 @@ class App extends Component {
           <NavBar/>
             <Switch>
              <Route path="/" component={Home} exact/>
+             <Route path="/Home" component={Home}/>
              <Route path="/About" component={About}/>
              <Route path="/login" component={LogIn}/>
              <ProtectedRoute path="/dashboard" component={Dashboard}/>
-             <ProtectedRoute path="/dashboard/sets" component={Dashboard}/>
-             <ProtectedRoute path="/dashboard/progress" component={Dashboard}/>
            </Switch>
         </div>
       </BrowserRouter>

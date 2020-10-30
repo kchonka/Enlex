@@ -4,28 +4,54 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const navbarstyle = {
   background: "#27259B",
-  alignItems: "center",
   width: "100%",
-  overflow: "hidden"
+  overflow: "hidden",
 }
 
 const aStyle = {
   display: "inline-block",
-  padding: "15px",
   textDecoration: "none",
   fontWeight: "bold",
+  padding: "10px",
   fontSize: 20,
   color: "#FFFFFF",
 }
 
 const logoStyle = {
-  height: "80px",
-  width: "140px",
-  paddingBottom: "6px",
+  height: "65px",
+  width: "120px",
   paddingLeft: "6px",
-  paddingTop: "2px",
+  paddingTop: "5px",
   float: "left",
-  position: "relative"
+  justifyContent: "center",
+}
+
+const loginStyle = {
+  textDecoration: "none",
+  fontWeight: "bold",
+  fontSize: 20,
+  color: "#FFFFFF",
+  padding: "20px",
+}
+
+const myaccountstyle = {
+  display: "inline-block",
+  border: "1px solid transparent",
+  borderStyle: "solid",
+  borderRadius: "8px",
+  padding: "0px 8px",
+  background: "#8DCAFF",
+  textAlign: "center",
+  text: "#000000"
+}
+
+const myaccounttext = {
+  display: "inline-block",
+  textDecoration: "none",
+  fontWeight: "bold",
+  padding: "10px",
+  fontSize: 20,
+  color: "#000000",
 }
 
 class NavBar extends Component{
@@ -33,11 +59,14 @@ class NavBar extends Component{
       return(
         <div style={navbarstyle}>
           <a href="/"><img src={require('../images/logowhiteblue2.png')} style={logoStyle}/></a>
-          <nav style={{float: "right", paddingRight: "15px"}}>
-            <ul>
+          <nav>
+            <ul style={{float: "left"}}>
+              <li style={{display: "inline-block"}}><a style={aStyle} href="/Home">Home</a></li>
               <li style={{display: "inline-block"}}><a style={aStyle} href="/About">About</a></li>
               <li style={{display: "inline-block"}}><a style={aStyle} href="https://github.com/kchonka/Enlex">Source</a></li>
-              <li style={{display: "inline-block"}}><a style={aStyle} href="/dashboard">My Account</a></li>
+            </ul>
+            <ul style={{float: "right", paddingRight: "30px"}}>
+              <li style={myaccountstyle}><a style={myaccounttext} href="/login"> My Account</a></li>
             </ul>
           </nav>
         </div>

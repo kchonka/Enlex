@@ -71,8 +71,6 @@ export const Home = () => {
         <br/>
         <SampleLang></SampleLang>
         <br/>
-        <br/>
-        <LoginButton></LoginButton>
       </div>
     );
 }
