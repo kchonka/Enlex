@@ -12,7 +12,7 @@ const aStyle = {
   display: "inline-block",
   textDecoration: "none",
   fontWeight: "bold",
-  padding: "10px",
+  padding: "12px",
   fontSize: 20,
   color: "#FFFFFF",
 }
@@ -34,7 +34,7 @@ const loginStyle = {
   padding: "20px",
 }
 
-const myaccountstyle = {
+const signupstyle = {
   display: "inline-block",
   border: "2px solid black",
   borderStyle: "solid",
@@ -45,11 +45,11 @@ const myaccountstyle = {
   text: "#000000"
 }
 
-const myaccounttext = {
+const signuptext = {
   display: "inline-block",
   textDecoration: "none",
   fontWeight: "bold",
-  padding: "10px",
+  padding: "9px",
   fontSize: 20,
   color: "#000000",
 }
@@ -66,7 +66,8 @@ class NavBar extends Component{
               <li style={{display: "inline-block"}}><a style={aStyle} href="https://github.com/kchonka/Enlex">Source</a></li>
             </ul>
             <ul style={{float: "right", paddingRight: "20px"}}>
-              <li style={myaccountstyle}><a style={myaccounttext} href="/login"> My Account</a></li>
+              <li style={{display: "inline-block"}}><a style={aStyle} href="/login"> Log In</a></li>
+              <li style={signupstyle}><a style={signuptext} href="/signup"> Sign Up</a></li>
             </ul>
           </nav>
         </div>
