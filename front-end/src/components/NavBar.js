@@ -36,7 +36,7 @@ const loginStyle = {
 
 const myaccountstyle = {
   display: "inline-block",
-  border: "1px solid transparent",
+  border: "2px solid black",
   borderStyle: "solid",
   borderRadius: "8px",
   padding: "0px 8px",
@@ -65,7 +65,7 @@ class NavBar extends Component{
               <li style={{display: "inline-block"}}><a style={aStyle} href="/About">About</a></li>
               <li style={{display: "inline-block"}}><a style={aStyle} href="https://github.com/kchonka/Enlex">Source</a></li>
             </ul>
-            <ul style={{float: "right", paddingRight: "30px"}}>
+            <ul style={{float: "right", paddingRight: "20px"}}>
               <li style={myaccountstyle}><a style={myaccounttext} href="/login"> My Account</a></li>
             </ul>
           </nav>
