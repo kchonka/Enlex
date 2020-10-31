@@ -11,19 +11,31 @@ import { About } from './About.js';
 import { LogIn } from './LogIn.js';
 import Dashboard from './Dashboard.js';
 import ProtectedRoute from "./components/ProtectedRoute";
+import SignUpForm from "./SignUpForm.js"
+
+const backgroundImageStyle = {
+  background: "black",
+  backgroundImage: `url(${globe})`,
+  backgroundRepeat:'no-repeat',
+  backgroundSize:'cover',
+  backgroundPosition: 'center',
+  height: '100vh',
+  margin: 0,
+  padding: 0
+}
 
 class App extends Component {
   render (){
     return(
       <BrowserRouter>
-        <div>
+        <div style={backgroundImageStyle}>
           <NavBar/>
             <Switch>
              <Route path="/" component={Home} exact/>
              <Route path="/Home" component={Home}/>
              <Route path="/About" component={About}/>
              <Route path="/login" component={LogIn}/>
-             <ProtectedRoute path="/dashboard" component={Dashboard}/>
+             <Route path="/signup" component={SignUpForm}/>
            </Switch>
         </div>
       </BrowserRouter>
