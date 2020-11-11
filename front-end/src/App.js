@@ -12,6 +12,7 @@ import { LogIn } from './LogIn.js';
 import Dashboard from './Dashboard.js';
 import ProtectedRoute from "./components/ProtectedRoute";
 import SignUpForm from "./SignUpForm.js"
+import SignIn from "./SignIn.js"
 
 const backgroundImageStyle = {
   background: "black",
@@ -36,6 +37,7 @@ class App extends Component {
              <Route path="/About" component={About}/>
              <Route path="/login" component={LogIn}/>
              <Route path="/signup" component={SignUpForm}/>
+             <Route path="/signin" component={SignIn}/>
            </Switch>
         </div>
       </BrowserRouter>

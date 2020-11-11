@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from '../images/logowhitepurple.png'
-import { useAuth0 } from "@auth0/auth0-react";
 
 const navbarstyle = {
   background: "#27259B",
@@ -66,7 +65,7 @@ class NavBar extends Component{
               <li style={{display: "inline-block"}}><a style={aStyle} href="https://github.com/kchonka/Enlex">Source</a></li>
             </ul>
             <ul style={{float: "right", paddingRight: "20px"}}>
-              <li style={{display: "inline-block"}}><a style={aStyle} href="/login"> Log In</a></li>
+              <li style={{display: "inline-block"}}><a style={aStyle} href="/signin"> Sign In</a></li>
               <li style={signupstyle}><a style={signuptext} href="/signup"> Sign Up</a></li>
             </ul>
           </nav>
