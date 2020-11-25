@@ -1,50 +1,86 @@
-import React from "react";
+import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import "./signupform.css"
+import "./signupform.css";
+import axios from "axios";
 
-const SignUpForm = (user) => {
-  return(
-    <div className="signUpBox">
-      <h1>Sign Up</h1>
-      <form>
-        <TextField
-          label="First name"
-          value={user.firstname}
-        />
-        <br/>
-        <TextField
-          label="Last name"
-          value={user.lastname}
-        />
-        <br/>
-        <TextField
-          label="Email"
-          type="email"
-          value={user.email}
-        />
-        <br/>
-        <TextField
-          label="Password"
-          type={"password"}
-          value={user.password}
-        />
-        <br/>
-        <br/>
-        <Button
-          Submit
-          variant="contained"
-          className="signUpSubmit"
-          primary={true}
-          type="submit"
-        >Sign Up</Button>
-      </form>
-      <p>
-        Aleady have an account? <br />
-        <a href="/signin">Sign in here</a>
-      </p>
-    </div>
-  );
+class SignUpForm extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      firstname: "",
+      lastname: "",
+      email: "",
+      password: ""
+    }
+  }
+
+  handleClick(event){
+    var payload = {
+      "firstname": this.state.firstname,
+      "lastname": this.state.lastname,
+      "email": this.state.email,
+      "password": this.state.password
+    }
+    axios.post("http://localhost:4000/signup", payload)
+    .then(function (response){
+      if (response.data.code == 200)
+      {
+        console.log("Registration Successful")
+      }
+    })
+    .catch(function(error){
+      console.log(error);
+    });
+  }
+
+  render(){
+    return(
+      <div className="signUpBox">
+        <h1>Sign Up</h1>
+        <form>
+          <TextField
+            label="First name"
+            value={this.firstname}
+            onChange = {(event, newValue) => this.setState({firstname:newValue})}
+          />
+          <br/>
+          <TextField
+            label="Last name"
+            value={this.lastname}
+            onChange = {(event, newValue) => this.setState({lastname:newValue})}
+          />
+          <br/>
+          <TextField
+            label="Email"
+            type="email"
+            value={this.email}
+            onChange = {(event, newValue) => this.setState({email:newValue})}
+          />
+          <br/>
+          <TextField
+            label="Password"
+            type={"password"}
+            value={this.password}
+            onChange = {(event, newValue) => this.setState({password:newValue})}
+          />
+          <br/>
+          <br/>
+          <Button
+            variant="contained"
+            className="signUpSubmit"
+            primary={true}
+            type="submit"
+            onClick={(event) => this.handleClick(event)}
+          >Sign Up</Button>
+        </form>
+        <p>
+          Aleady have an account? <br />
+          <a href="/signin">Sign in here</a>
+        </p>
+      </div>
+    );
+  }
 }
 
 export default SignUpForm;

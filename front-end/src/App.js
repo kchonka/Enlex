@@ -10,7 +10,6 @@ import { Layout } from './components/Layout';
 import { About } from './About.js';
 import { LogIn } from './LogIn.js';
 import Dashboard from './Dashboard.js';
-import ProtectedRoute from "./components/ProtectedRoute";
 import SignUpForm from "./SignUpForm.js"
 import SignIn from "./SignIn.js"
 
