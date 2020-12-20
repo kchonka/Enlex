@@ -1,8 +1,10 @@
 CREATE TABLE Users(
   user_id INT,
-  email VARCHAR(255),
   first_name VARCHAR(255),
-  last_name VARCHAR(255)
+  last_name VARCHAR(255),
+  email VARCHAR(255),
+  salt  VARCHAR(255),
+  hashed_pass VARCHAR(255)
 );
 
 CREATE TABLE All_Languages(
