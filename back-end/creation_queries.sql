@@ -1,10 +1,11 @@
 CREATE TABLE Users(
-  user_id INT,
+  user_id INT AUTO_INCREMENT,
   first_name VARCHAR(255),
   last_name VARCHAR(255),
   email VARCHAR(255),
   salt  VARCHAR(255),
-  hashed_pass VARCHAR(255)
+  hashed_pass VARCHAR(255),
+  PRIMARY KEY (user_id)
 );
 
 CREATE TABLE All_Languages(
