@@ -16,13 +16,13 @@ class SignUpForm extends Component {
   }
 
   handleClick(event){
-    var payload = {
-      "firstname": this.state.firstname,
-      "lastname": this.state.lastname,
-      "email": this.state.email,
-      "password": this.state.password
-    }
-    axios.post("http://localhost:4000/signup", payload)
+    let data = new FormData();
+    data.append('firstname', this.state.firstname)
+    data.append('lastname', this.state.lastname)
+    data.append('email', this.state.email)
+    data.append('password', this.state.password)
+  
+    axios.post("http://localhost:5000/signup", data)
     .then(function (response){
       if (response.data.code == 200)
       {
