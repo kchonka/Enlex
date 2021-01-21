@@ -13,10 +13,17 @@ class SignUpForm extends Component {
       email: "",
       password: ""
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleClick(event){
+  handleChange(event){
+    this.setState({[event.target.name] : event.target.value})
+  }
+
+  handleSubmit(event){
     let data = new FormData();
+
     data.append('firstname', this.state.firstname)
     data.append('lastname', this.state.lastname)
     data.append('email', this.state.email)
@@ -34,35 +41,47 @@ class SignUpForm extends Component {
     });
   }
 
+
   render(){
     return(
       <div className="signUpBox">
         <h1>Sign Up</h1>
         <form>
           <TextField
+            type="text"
             label="First name"
-            value={this.firstname}
-            onChange = {(event, newValue) => this.setState({firstname:newValue})}
-          />
+            name="firstname"
+            value={this.state.firstname}
+            //onChange={event => this.setState({ firstname: event.target.value })}
+            onChange={this.handleChange}
+            />
           <br/>
           <TextField
+            type="text"
             label="Last name"
-            value={this.lastname}
-            onChange = {(event, newValue) => this.setState({lastname:newValue})}
+            name="lastname"
+            value={this.state.lastname}
+            //onChange={event => this.setState({ lastname: event.target.value })}
+            onChange={this.handleChange}
+
           />
           <br/>
           <TextField
             label="Email"
             type="email"
-            value={this.email}
-            onChange = {(event, newValue) => this.setState({email:newValue})}
+            name="email"
+            value={this.state.email}
+            //onChange={event => this.setState({ email: event.target.value })}
+            onChange={this.handleChange}
           />
           <br/>
           <TextField
             label="Password"
             type={"password"}
-            value={this.password}
-            onChange = {(event, newValue) => this.setState({password:newValue})}
+            name={"password"}
+            value={this.state.password}
+            //onChange={event => this.setState({ password: event.target.value })}
+            onChange={this.handleChange}
           />
           <br/>
           <br/>
@@ -71,7 +90,7 @@ class SignUpForm extends Component {
             className="signUpSubmit"
             primary={true}
             type="submit"
-            onClick={(event) => this.handleClick(event)}
+            onClick={(event) => this.handleSubmit(event)}
           >Sign Up</Button>
         </form>
         <p>
