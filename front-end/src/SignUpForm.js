@@ -52,7 +52,6 @@ class SignUpForm extends Component {
             label="First name"
             name="firstname"
             value={this.state.firstname}
-            //onChange={event => this.setState({ firstname: event.target.value })}
             onChange={this.handleChange}
             />
           <br/>
@@ -61,7 +60,6 @@ class SignUpForm extends Component {
             label="Last name"
             name="lastname"
             value={this.state.lastname}
-            //onChange={event => this.setState({ lastname: event.target.value })}
             onChange={this.handleChange}
 
           />
@@ -71,7 +69,6 @@ class SignUpForm extends Component {
             type="email"
             name="email"
             value={this.state.email}
-            //onChange={event => this.setState({ email: event.target.value })}
             onChange={this.handleChange}
           />
           <br/>
@@ -80,7 +77,6 @@ class SignUpForm extends Component {
             type={"password"}
             name={"password"}
             value={this.state.password}
-            //onChange={event => this.setState({ password: event.target.value })}
             onChange={this.handleChange}
           />
           <br/>
