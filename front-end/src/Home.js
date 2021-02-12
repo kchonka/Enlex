@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import FadeIn from 'react-fade-in';
 import TextLoop from "react-text-loop";
 import globe from './images/globe.png';
-import LoginButton from "./LoginButton.js"
 
 const backgroundImageStyle = {
   background: "black",

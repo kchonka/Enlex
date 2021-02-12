@@ -5,13 +5,9 @@ import { Home } from './Home';
 import AnimateOnChange from 'react-animate-on-change';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import SideBar from './components/SideBar';
 import { Layout } from './components/Layout';
 import { About } from './About.js';
-import { LogIn } from './LogIn.js';
-import Dashboard from './Dashboard.js';
-import SignUpForm from "./SignUpForm.js"
-import SignIn from "./SignIn.js"
+import Learn from './Learn.js';
 
 const backgroundImageStyle = {
   background: "black",
@@ -30,14 +26,12 @@ class App extends Component {
       <BrowserRouter>
         <div style={backgroundImageStyle}>
           <NavBar/>
-            <Switch>
-             <Route path="/" component={Home} exact/>
-             <Route path="/Home" component={Home}/>
-             <Route path="/About" component={About}/>
-             <Route path="/login" component={LogIn}/>
-             <Route path="/signup" component={SignUpForm}/>
-             <Route path="/signin" component={SignIn}/>
-           </Switch>
+          <Switch>
+            <Route path="/" component={Home} exact/>
+            <Route path="/Home" component={Home}/>
+            <Route path="/About" component={About}/>
+            <Route path="/Learn" component={Learn}/>
+          </Switch>
         </div>
       </BrowserRouter>
     );
