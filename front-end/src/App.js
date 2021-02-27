@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import { Layout } from './components/Layout';
 import { About } from './About.js';
-import Learn from './Learn.js';
+import { Learn } from './Learn.js';
 
 const backgroundImageStyle = {
   background: "black",

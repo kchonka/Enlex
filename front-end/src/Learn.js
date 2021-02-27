@@ -1,16 +1,35 @@
 import React, {Component} from 'react';
 import SideBar from './components/SideBar.js';
+import Tile from './components/Tile.js';
 import './learn.css';
 
-class Learn extends Component{
-    render(){
-        return(
-            <div style={{width: '100%'}}>
-                <SideBar/>
-                <div>hello</div>
+
+// TODO: write function that takes the width/height of the screen & divdes by how many tiles to display
+
+export const Learn = () => {
+    return(
+        <div id="learnPage">
+            <div id="info">
+                <h1> Explore News in a Foreign Language</h1>
+                <h4> Select a Target Language in the upper right corner to get started</h4>
             </div>
-        )
-    }
+            <div id="articles">
+                <Tile/>
+                <Tile/>
+                <Tile/>
+                <Tile/>
+                <Tile/>
+                <Tile/>
+                <Tile/>
+                <Tile/>
+                <Tile/>
+                <Tile/>
+                <Tile/>
+                <Tile/>
+            </div>
+        </div>
+        
+    )
+    
 }
 
-export default Learn;
