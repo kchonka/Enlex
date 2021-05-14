@@ -1,13 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import globe from './images/globe.png';
-import FadeIn from 'react-fade-in';
 import { Home } from './Home';
-import AnimateOnChange from 'react-animate-on-change';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import NavBar from './components/NavBar';
-import { Layout } from './components/Layout';
+import NavBar from './navbar/NavBar';
 import { About } from './About.js';
-import { Learn } from './Learn.js';
+import { Learn } from './learn/Learn.js';
 
 const backgroundImageStyle = {
   background: "black",
@@ -20,7 +17,7 @@ const backgroundImageStyle = {
   padding: 0
 }
 
-class App extends Component {
+class App extends React.Component {
   render (){
     return(
       <BrowserRouter>

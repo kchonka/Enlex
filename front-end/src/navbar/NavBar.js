@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './navbar.css';
 
 import { Dropdown } from 'semantic-ui-react';
@@ -28,12 +28,22 @@ const languageOptions = [
   { key: 'Vietnamese', text: 'Vietnamese', value: 'Vietnamese' },
 ]
 
-class NavBar extends Component{
+class NavBar extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = { targetLanguage: 'English'}
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange = (e, { value }) => {
+    this.setState({ targetLanguage: value });
+  }
+
   render(){
       return(
         <div class="navbar">
           <div class="logoBox">
-            <a href="/"><img src={require('../images/logowhiteblue2.png')} class="logo"/></a>
+            <a href="/"><img src={require('../images/logowhiteblue2.png')} id="logo"/></a>
           </div>
           <div class="navTextBox">
             <nav>
@@ -50,6 +60,7 @@ class NavBar extends Component{
               fluid
               selection
               options={languageOptions}
+              onChange={this.handleChange}
             />
           </div>
         </div>

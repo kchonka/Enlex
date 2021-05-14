@@ -4,17 +4,17 @@ import './tile.css';
 class Tile extends Component{
     constructor(props){
         super(props);
-        this.handleClick = this.handleClick.bind(this);
+        //this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(){
-        console.log("Clicked")
+        
     }
 
     render(){
         return(
-            <div id="box" onclick="./home">
-                <h2 class="heading"> News </h2>
+            <div id="box" onClick={this.handleClick}>
+                <h4> {this.props.title} </h4>
             </div>
         )
     }
