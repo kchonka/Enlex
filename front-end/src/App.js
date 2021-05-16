@@ -5,6 +5,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './navbar/NavBar';
 import { About } from './About.js';
 import { Learn } from './learn/Learn.js';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import { Dropdown } from 'semantic-ui-react';
+
 
 const backgroundImageStyle = {
   background: "black",
@@ -21,7 +24,7 @@ class App extends React.Component {
   render (){
     return(
       <BrowserRouter>
-        <div style={backgroundImageStyle}>
+        <div>
           <NavBar/>
           <Switch>
             <Route path="/" component={Home} exact/>
