@@ -1,8 +1,12 @@
 import React from 'react';
 import Tile from './Tile.js';
+import SideBar from './SideBar';
 import { Dropdown } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css'; //for the Dropdown component
 import './learn.css';
+import Card from 'react-bootstrap/Card';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+
 
 const languageOptions = [
     { key: 'Arabic', text: 'Arabic', value: 'Arabic' },
@@ -14,24 +18,13 @@ const languageOptions = [
     { key: 'German', text: 'German', value: 'German' },
     { key: 'Greek', text: 'Greek', value: 'Greek' },
     { key: 'Hungarian', text: 'Hungarian', value: 'Hungarian' },
-    { key: 'Italian', text: 'Italian', value: 'Italian' },
-    { key: 'Japanese', text: 'Japanese', value: 'Japanese' },
-    { key: 'Korean', text: 'Korean', value: 'Korean' },
-    { key: 'Lithuanian', text: 'Lithuanian', value: 'Lithuanian' },
-    { key: 'Persian', text: 'Persian', value: 'Persian' },
-    { key: 'Polish', text: 'Polish', value: 'Polish' },
-    { key: 'Portuguese', text: 'Portuguese', value: 'Portuguese' },
-    { key: 'Russian', text: 'Russian', value: 'Russian' },
-    { key: 'Spanish', text: 'Spanish', value: 'Spanish' },
-    { key: 'Swedish', text: 'Swedish', value: 'Swedish' },
-    { key: 'Turkish', text: 'Turkish', value: 'Turkish' },
-    { key: 'Vietnamese', text: 'Vietnamese', value: 'Vietnamese' },
+    { key: 'Italian', text: 'Italian', value: 'Italian' }
   ]
 
 export class Learn extends React.Component{
     constructor(props){
         super(props);
-        this.state = { targetLanguage: 'English'}
+        this.state = { targetLanguage: 'English' }  // default to English
         this.handleLanguageChange = this.handleLanguageChange.bind(this);
     }
 
@@ -40,27 +33,27 @@ export class Learn extends React.Component{
     render(){
         return(
             <div id="learnPage">
-                <div id="header"> 
-                    <h1>Explore News in a Foreign Language</h1>
-                </div>
-                <div id="info">
-                    <h4> Select a Target Language to get started.</h4>
-                    <h4> Showing results for the {this.state.targetLanguage} language. </h4>
-                    <div class="languageSelection">
-                        <Dropdown
-                            placeholder='Select Target Language'
-                            fluid
-                            selection
-                            options={languageOptions}
-                            onChange={this.handleLanguageChange} 
-                        />
-                </div>
-                </div>
-                <br/>
-                <div id="articles">
-                    <Tile title={"Random Title 1"}/>
-                    <Tile title={"Random Title 2"}/>
-                    <Tile title={"Random Title 3"}/>
+                <SideBar/>
+                <div id="main">
+                    <   div id="info">
+                        <div>
+                            <h2 style={{fontWeight: "bold", margin: "5"}}> Exploring News in Foreign Languages</h2>
+                            <h5 style={{margin: "0"}}> Select a Target Language. Showing results for: {this.state.targetLanguage} </h5>
+                            <br/>
+                        </div>
+                        <div id="dropdownMenu">
+                            <Dropdown
+                                placeholder='Select Target Language'
+                                fluid
+                                selection
+                                options={languageOptions}
+                                onChange={this.handleLanguageChange} 
+                            />
+                        </div>
+                        <div id="newsArticles">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         )
