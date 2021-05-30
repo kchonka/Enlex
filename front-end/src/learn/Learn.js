@@ -28,14 +28,11 @@ export class Learn extends React.Component{
 
     handleLanguageChange = (e, { value }) => { this.setState({ targetLanguage: value }); }
 
-    // TODO: need function that maps languages to the written english equivalent, or diff state var
-    // Review React component life cycle
     getArticles(){
-        const url = "https://newsapi.org/v2/sources?apiKey=" + apiKey;
+        const url = "https://newsapi.org/v2/top-headlines&apiKey=" + process.env.REACT_APP_NEWS_API_KEY;
         fetch(url)
             .then(response => response.json())
-            .then(data => console.log(data["sources"][3]));
-
+            .then(data => console.log(data["articles"][0]));
     }
 
     componentDidMount() {
