@@ -8,12 +8,12 @@ export class SideBar extends React.Component{
       return(
         <ProSidebar>
           <Menu iconShape="square">
-            <MenuItem>World News</MenuItem>
+            <MenuItem>Business</MenuItem>
+            <MenuItem>Entertainment</MenuItem>
+            <MenuItem>General</MenuItem>
+            <MenuItem>Health</MenuItem>
+            <MenuItem>Science</MenuItem>
             <MenuItem>Sports</MenuItem>
-            <SubMenu title="Components">
-              <MenuItem>Component 1</MenuItem>
-              <MenuItem>Component 2</MenuItem>
-            </SubMenu>
           </Menu>
         </ProSidebar>
       )

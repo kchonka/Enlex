@@ -8,10 +8,19 @@ import axios from 'axios';
 
 const languageOptions = [
     { key: 'Arabic', text: 'Arabic', value: 'ar' },
+    { key: 'Chinese', text: 'Chinese', value: 'zh' },
+    { key: 'Dutch', text: 'Dutch', value: 'nl' },
     { key: 'English', text: 'English', value: 'en' },
     { key: 'French', text: 'French', value: 'fr' },
     { key: 'German', text: 'German', value: 'de' },
-    { key: 'Italian', text: 'Italian', value: 'it' }
+    { key: 'Hebrew', text: 'Hebrew', value: 'he' },
+    { key: 'Italian', text: 'Italian', value: 'it' },
+    { key: 'Northern Sami', text: 'Northern Sami', value: 'se' },
+    { key: 'Norwegian', text: 'Norwegian', value: 'no' },
+    { key: 'Portuguese', text: 'Portuguese', value: 'pt' },
+    { key: 'Russian', text: 'Russian', value: 'ru' },
+    { key: 'Spanish', text: 'Spanish', value: 'es' }
+
   ]
 
 export class Learn extends React.Component{
@@ -19,6 +28,7 @@ export class Learn extends React.Component{
         super(props);
         this.state = { 
             targetLanguage: 'en',   // default: English (en)
+            category: null,
             isLoaded: false
         }
         this.handleLanguageChange = this.handleLanguageChange.bind(this);
@@ -55,7 +65,6 @@ export class Learn extends React.Component{
                     <div id="info">
                         <div>
                             <h2 style={{fontWeight: "bold", margin: "5"}}> Exploring News in Foreign Languages</h2>
-                            <h5 style={{margin: "0"}}> Showing results for: {this.state.targetLanguage} </h5>
                             <br/>
                         </div>
                         <div id="dropdownMenu">
