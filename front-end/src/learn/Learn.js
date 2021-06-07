@@ -5,6 +5,7 @@ import { Dropdown } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css'; //for the Dropdown component
 import './learn.css';
 import axios from 'axios';
+import Articles from './Articles.js';
 
 const languageOptions = [
     { key: 'Arabic', text: 'Arabic', value: 'ar' },
@@ -29,7 +30,9 @@ export class Learn extends React.Component{
         this.state = { 
             targetLanguage: 'en',   // default: English (en)
             category: null,
-            isLoaded: false
+            isLoaded: false,
+            articles: [],
+            tiles: null
         }
         this.handleLanguageChange = this.handleLanguageChange.bind(this);
         this.getArticles = this.getArticles.bind(this);
@@ -43,10 +46,30 @@ export class Learn extends React.Component{
                language: lang,
                apiKey: process.env.REACT_APP_NEWS_API_KEY
            }
+        }) 
+        .then(response => {
+            console.log(response.data.articles)
+            this.setState({articles: response.data.articles })
         })
-        .then(function (response) {
-        console.log(response.data);
-        })
+        .catch(error => {
+            if (error.response) {
+              // Request made and server responded
+              console.log(error.response.data);
+              console.log(error.response.status);
+              console.log(error.response.headers);
+            } else if (error.request) {
+              // The request was made but no response was received
+              console.log(error.request);
+            } else {
+              // Something happened in setting up the request that triggered an Error
+              console.log('Error', error.message);
+            }
+        });
+    }
+
+    populateTiles(){
+        
+
     }
 
     componentDidMount() {
@@ -77,6 +100,7 @@ export class Learn extends React.Component{
                             />
                         </div>
                         <div id="newsArticles">
+                            {this.state.tiles}
                         </div>
                     </div>
                 </div>
