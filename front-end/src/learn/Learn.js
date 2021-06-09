@@ -67,17 +67,15 @@ export class Learn extends React.Component{
         });
     }
 
-    populateTiles(){
-        
-
-    }
-
     componentDidMount() {
         this.getArticles(this.state.targetLanguage);
     }
 
-    componentDidUpdate(){
-        this.getArticles(this.state.targetLanguage);
+    componentDidUpdate(prevProps, prevState){
+        if (this.state.targetLanguage !== prevState.targetLanguage){
+            console.log('Target language has changed.')
+            this.getArticles(this.state.targetLanguage);
+        }
     }
 
     render(){
@@ -100,7 +98,6 @@ export class Learn extends React.Component{
                             />
                         </div>
                         <div id="newsArticles">
-                            {this.state.tiles}
                         </div>
                     </div>
                 </div>
