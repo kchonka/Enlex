@@ -97,8 +97,7 @@ export class Learn extends React.Component{
                                 onChange={this.handleLanguageChange} 
                             />
                         </div>
-                        <div id="newsArticles">
-                        </div>
+                        <Articles articles={this.state.articles}/>
                     </div>
                 </div>
             </div>

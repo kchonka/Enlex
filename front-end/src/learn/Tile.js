@@ -7,9 +7,6 @@ class Tile extends Component{
         //this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(){
-        
-    }
 
     render(){
         return(
