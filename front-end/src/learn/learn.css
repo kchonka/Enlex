@@ -1,6 +1,7 @@
 #learnPage{
     height: 100vh;    
     display: flex;
+    overflow-y: auto;
     justify-content: flex-start;
     background: linear-gradient(#e66465, #9198e5);
 }
@@ -8,6 +9,7 @@
 #main{
     width: 100vw;
     margin: 0.5%;
+    overflow-y: auto;
     background-color: white;
 }
 

@@ -97,7 +97,7 @@ export class Learn extends React.Component{
                                 onChange={this.handleLanguageChange} 
                             />
                         </div>
-                        <Articles articles={this.state.articles}/>
+                        <Articles articles={this.state.articles} language={this.state.targetLanguage}/>
                     </div>
                 </div>
             </div>

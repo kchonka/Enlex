@@ -12,7 +12,7 @@ export default class Articles extends React.Component{
     render(){
         return(
             <div>
-                {this.props.articles.map((a) => (<Tile title={a.title}/>))}
+                {this.props.articles.map((a) => (<Tile title={a.title} image={a.urlToImage} language={this.props.language}/>))}
             </div>
         )
     }

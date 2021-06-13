@@ -1,11 +1,27 @@
 #box{
-    height: 120px;
-    width: 170px;
+    height: 320px;
+    width: 280px;
     background-color: gainsboro;
     display: inline-block;
     text-align: center;
     box-shadow: 3px 3px 2px 1px gray;
     margin: 15px;
+}
+
+img {
+    height: 200px;
+    width: 280px;
+}
+
+#top{
+    height: 20%;
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+#bottom{
+    height: 20%;
+    background-color: lightpink;
 }
 
 .heading{
